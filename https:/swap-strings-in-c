@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main()
+{
+char *str1 = "geeks";
+char *str2 = "forgeeks";
+char * temp=str1;
+str1=str2;
+str2=temp;
+
+
+    return 0;
+}
