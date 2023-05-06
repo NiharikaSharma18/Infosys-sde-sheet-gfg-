@@ -1,0 +1,41 @@
+/ User function Template for C++
+
+class Solution {
+  public:
+  int fac(int N){
+      if(N==0)
+      return 1;
+      if(N==1)
+      return 1;
+      else 
+      return fac(N)*fac(N-1);
+  }
+  
+    int isPerfect(int N) {
+        // code here
+        int k=N,sum=0;
+        while(N!=0){
+            int d=N%10;
+            sum +=fac(d);
+            N=N/10;
+        }
+        if(sum==k)
+        return 1;
+        else
+        return 0;
+    }
+};
+
+//{ Driver Code Starts.
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int N;
+        cin >> N;
+        Solution ob;
+        cout << ob.isPerfect(N) << "\n";
+    }
+}
+
+// } Driver Code Ends
