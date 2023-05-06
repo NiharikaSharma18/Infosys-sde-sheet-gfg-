@@ -1,0 +1,21 @@
+
+// } Driver Code Ends
+class Solution
+{
+    public:
+        string MaxNumber(int a[], int n)
+        {
+           //code here.
+          int count[10]={0};
+       for(int i=0;i<n;i++){
+           count[a[i]]++;
+           
+       }
+       string g;
+          for(int i=9;i>=0;i--){
+              for(int j=0;j<count[i];j++)
+              g+=to_string(i);
+          }
+           return g;
+        }  
+};
